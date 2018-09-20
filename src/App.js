@@ -3,13 +3,15 @@ import React, {Component} from 'react';
 import logo from './todopostit.png';
 import './App.css';
 
+
 import AddToDo from "./AddTodo";
 import ListToDoV2 from './ListToDoV2.js';
+import Header from "./Header";
 
 // Setup a couple vars for the API. Not the best way but works for this example
 const todoListEndpoint = "http://localhost:3001/api/todos/";
 const todoBasicEndpoint = "http://localhost:3001/api/todo/";
-const todoUser = "testuser";
+const todoUser = "Jordan";
 
 // Define the base application
 class App extends Component {
@@ -93,10 +95,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">{this.state.appTitle}</h1>
-                </header>
+                <Header appTitle={this.state.appTitle}/>
                 <div>
                     <AddToDo clicked={this.clickAdd}/>
                 </div>
