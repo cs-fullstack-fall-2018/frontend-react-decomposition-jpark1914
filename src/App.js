@@ -95,6 +95,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+            // KEY: Good Job! Well Done on all counts! :-)
                 <Header appTitle={this.state.appTitle}/>
                 <div>
                     <AddToDo clicked={this.clickAdd}/>
